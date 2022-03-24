@@ -1,16 +1,18 @@
-public class Animal {
+public abstract class Animal {
     protected String name;
 
     public Animal(String name) {
         this.name = name;
     }
 
-    public String makeNoise() {
-        return "-default noise-";
-    }
+    public abstract String makeNoise(); //{
+        //return "-default noise-";
+    //}
 
-    public void eat(String food) {
-        // no default code defined
+    // behøve rikke en buddy, men klassen skal være abtrakt. men den SKAL bruges/kaldes i en  sub klasse for at det virker hvis det er abstrakt.
+
+    public abstract void eat(String food);{
+         //no default code defined
     }
 
     public void sleep(int hours) {

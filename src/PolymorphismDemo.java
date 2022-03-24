@@ -13,20 +13,33 @@ public class PolymorphismDemo {
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(cat1);
         animals.add(cat2);
-        animals.add(dog1);
-        animals.add(dog2);
+        //animals.add(dog1);
+        //animals.add(dog2);
 
         // Make a list of foods, and a random-thingy
         String[] foods = {"raw meat", "dog food", "rotten seal", "fish"};
         Random rand = new Random();
 
+        //TEst
+        //Animal ani1 = new Animal ("Dyr");
+        //animals.add(ani1);
+
+
         // Go through all animals, make them eat and sleep
-        for(Animal animal : animals) {
+        for (Animal animal : animals) {
             System.out.println(animal);
             animal.eat(foods[rand.nextInt(foods.length)]); // eat random food
             animal.sleep(rand.nextInt(5));                 // sleep up to 5 hours
             // TODO: What if we want them to wag their tail or hiss?
             System.out.println();
+
+
+            if (animal instanceof Cat cat) {
+                //Cat cat = (Cat)animal; //instance of
+                //((Cat)animal).hiss();
+                cat.hiss();
+            }
         }
     }
 }
+
