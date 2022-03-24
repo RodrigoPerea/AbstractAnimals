@@ -1,4 +1,6 @@
 public abstract class Animal {
+
+    //abstract, hjælp til selvhjælp.
     protected String name;
 
     public Animal(String name) {
